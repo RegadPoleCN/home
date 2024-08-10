@@ -27,6 +27,12 @@
             {{ siteIcp }}
           </a>
         </span>
+        <span>
+          &amp;&nbsp;友情链接:&nbsp;
+          <a href="https://help.mc.zorua.top/" target="_blank">
+          有兽焉粉丝服务器
+          </a>
+        </span>
       </div>
       <div v-else class="lrc">
         <Transition name="fade" mode="out-in">
@@ -59,7 +65,7 @@ const siteIcp = ref(import.meta.env.VITE_SITE_ICP);
 const siteAuthor = ref(import.meta.env.VITE_SITE_AUTHOR);
 const siteUrl = computed(() => {
   const url = import.meta.env.VITE_SITE_URL;
-  if (!url) return "https://www.imsyy.top";
+  if (!url) return "https://regadpole.top";
   // 判断协议前缀
   if (!url.startsWith("http://") && !url.startsWith("https://")) {
     return "//" + url;
