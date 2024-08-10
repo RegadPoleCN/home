@@ -8,5 +8,25 @@
     "icon": "LaptopCode",
     "name": "站点监测",
     "link": "https://status.regadpole.top/"
+  },
+  {
+    "icon": "Server",
+    "name": "有兽焉粉丝服",
+    "link": "https://help.mc.zorua.top/"
+  },
+  {
+    "icon": "Plug",
+    "name": "Modrinth",
+    "link": "https://modrinth.com/user/RegadPole"
+  },
+  {
+    "icon": "GitAlt",
+    "name": "Gitee",
+    "link": "https://gitee.com/regadpole"
+  },
+  {
+    "icon": "Payment28Regular",
+    "name": "赞助链接",
+    "link": "https://afdian.com/a/RegadPole"
   }
 ]
