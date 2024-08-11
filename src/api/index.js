@@ -73,3 +73,19 @@ export const getOtherWeather = async () => {
   const res = await fetch("https://api.oioweb.cn/api/weather/GetWeather");
   return await res.json();
 };
+
+//获取有兽焉粉丝服务器文档404界面文字
+export const get404Msg = async () => {
+  // let msg = [];
+  // axios.get("https://mirror.ghproxy.com/https://raw.githubusercontent.com/ZoruaFox/ysy-fanserver-helppage/master/docs/.vuepress/configs/notFoundMsg.json")
+  // .then(response => {
+  //     const e = response.data;
+  //     msg = e.notFoundMsg;
+  // })  
+  // .catch(error => {
+  //   console.log(error)
+  // });
+  const res = await fetch("https://mirror.ghproxy.com/https://raw.githubusercontent.com/ZoruaFox/ysy-fanserver-helppage/master/docs/.vuepress/configs/notFoundMsg.json");
+  const msg = await res.json().notFoundMsg;
+  return await msg[Math.floor(Math.random() * msg.length)];
+}

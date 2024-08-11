@@ -1,6 +1,11 @@
 <template>
-  <div class="more-content">您可在此编写任意内容</div>
+  <div class="more-content">{{msg}}</div>
 </template>
+
+<script setup>
+import { get404Msg } from "@/api";
+const msg = await get404Msg();
+</script>
 
 <style lang="scss" scoped>
 .more-content {
