@@ -7,12 +7,17 @@
   {
     "icon": "LaptopCode",
     "name": "站点监测",
-    "link": "https://status.regadpole.top/"
+    "link": "https://status.regadpole.top"
   },
   {
     "icon": "Payment28Regular",
     "name": "赞助链接",
     "link": "https://afdian.com/a/RegadPole"
+  },
+  {
+    "icon": "ListAltRegular",
+    "name": "Alist",
+    "link": "https://alist.regadpole.top"
   },
   {
     "icon": "Plug",
@@ -23,5 +28,10 @@
     "icon": "GitAlt",
     "name": "Gitee",
     "link": "https://gitee.com/regadpole"
+  },
+  {
+    "icon": "ApiFilled",
+    "name": "API-meting",
+    "link": "https://meting.regadpole.top"
   }
 ]
