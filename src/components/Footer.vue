@@ -27,7 +27,7 @@
             {{ siteIcp }}
           </a>
         </span>
-        <span>
+        <span class="hidden">
           &amp;&nbsp;友情链接:&nbsp;
           <a href="https://help.mc.zorua.top/" target="_blank">
           有兽焉粉丝服务器
