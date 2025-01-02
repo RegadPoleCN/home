@@ -77,7 +77,7 @@ export const getOtherWeather = async () => {
 //获取有兽焉粉丝服务器文档404界面文字
 export const get404Msg = async () => {
   let msg = [];
-  await axios.get("https://ghp.ci/https://raw.githubusercontent.com/ZoruaFox/ysy-fanserver-helppage/master/docs/.vuepress/configs/notFoundMsg.json")
+  await axios.get("https://ghproxy.net/https://raw.githubusercontent.com/ZoruaFox/ysy-fanserver-helppage/master/docs/.vuepress/configs/notFoundMsg.json")
   .then(response => {
       const e = response.data;
       msg = e.notFoundMsg;
