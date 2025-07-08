@@ -45,9 +45,28 @@ export const getPlayerList = async (server, type, id) => {
 
 // 获取一言数据
 export const getHitokoto = async () => {
-  const res = await fetch("https://v1.hitokoto.cn");
-  return await res.json();
-};
+  let res;
+  const urls = [
+    "https://v1.hitokoto.cn", 
+    "https://api.vvhan.com/api/ian/rand?type=json", 
+    "https://whyta.cn/api/yiyan?key=d5c296b91907", 
+    "https://v2.alapi.cn/api/hitokoto?token=LwExDtUWhF3rH5ib"
+  ];
+  for (let i = 0; i < urls.length; i++) {
+    try {
+      const url = urls[i]
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      const json = await response.json();
+      res =  [i, json];
+      break;
+    } catch (error) {
+      console.warn(`Failed to fetch from ${urls[i]}:`, error.message);
+    }
+  }
+  if (res == null) throw new Error('All URLs failed');
+  return await res;
+}
 
 /**
  * 天气
@@ -55,7 +74,9 @@ export const getHitokoto = async () => {
 
 // 获取高德地理位置信息
 export const getAdcode = async (key) => {
-  const res = await fetch(`https://restapi.amap.com/v3/ip?key=${key}`);
+  const ip = getIp();
+  const res = await fetch(`https://restapi.amap.com/v3/ip?key=${key}&ip=${ip}`);
+  
   return await res.json();
 };
 
@@ -73,6 +94,15 @@ export const getOtherWeather = async () => {
   const res = await fetch("https://api.oioweb.cn/api/weather/GetWeather");
   return await res.json();
 };
+
+export const getIp = async () => {
+  try {
+    const response = await fetch('https://ipinfo.io/json');
+    return response.json().ip;
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 //获取有兽焉粉丝服务器文档404界面文字
 export const get404Msg = async () => {
