@@ -74,7 +74,7 @@ export const getHitokoto = async () => {
 
 // 获取高德地理位置信息
 export const getAdcode = async (key) => {
-  const ip = getIp();
+  const ip = await getIp();
   const res = await fetch(`https://restapi.amap.com/v3/ip?key=${key}&ip=${ip}`);
   
   return await res.json();
@@ -97,8 +97,8 @@ export const getOtherWeather = async () => {
 
 export const getIp = async () => {
   try {
-    const response = await fetch('https://ipinfo.io/json');
-    return response.json().ip;
+    const response = await axios.get('https://ipinfo.io/json');
+    return response.data.ip;
   } catch (error) {
     console.error(error);
   }
