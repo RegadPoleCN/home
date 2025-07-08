@@ -8,6 +8,7 @@
             <el-radio value="1" size="large" border>每日一图</el-radio>
             <el-radio value="2" size="large" border>随机风景</el-radio>
             <el-radio value="3" size="large" border>随机动漫</el-radio>
+            <el-radio value="4" size="large" border>随机furry</el-radio>
           </el-radio-group>
         </div>
       </el-collapse-item>
@@ -164,7 +165,7 @@ const radioChange = () => {
           justify-content: space-between;
 
           .el-radio {
-            margin: 10px 16px;
+            margin: 10px 10px;
             background: #ffffff26;
             border: 2px solid transparent;
             border-radius: 8px;
