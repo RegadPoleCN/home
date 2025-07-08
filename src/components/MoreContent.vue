@@ -26,7 +26,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   flex-direction: row;   /*设置主轴方向是水平方向*/
-  margin-top: 20px;
+  margin-top: 3%;
   width: 100%;
   height: 100%;
 }
@@ -35,7 +35,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   flex-direction: row;   /*设置主轴方向是水平方向*/
-  margin-top: -18px;
+  margin-top: -5%;
   width: 100%;
   height: 100%;
 }
