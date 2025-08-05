@@ -26,7 +26,6 @@
 <script setup>
 import { mainStore } from "@/store";
 import { Error } from "@icon-park/vue-next";
-import { getBingPic } from "../api";
 
 const store = mainStore();
 const bgUrl = ref(null);
