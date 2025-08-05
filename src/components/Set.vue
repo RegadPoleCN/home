@@ -9,6 +9,7 @@
             <el-radio value="2" size="large" border>随机风景</el-radio>
             <el-radio value="3" size="large" border>随机动漫</el-radio>
             <el-radio value="4" size="large" border>随机furry</el-radio>
+            <el-radio value="5" size="large" border>二次萌图</el-radio>
           </el-radio-group>
         </div>
       </el-collapse-item>

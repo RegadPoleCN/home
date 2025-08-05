@@ -26,6 +26,7 @@
 <script setup>
 import { mainStore } from "@/store";
 import { Error } from "@icon-park/vue-next";
+import { getBingPic } from "../api";
 
 const store = mainStore();
 const bgUrl = ref(null);
@@ -37,7 +38,7 @@ const emit = defineEmits(["loadComplete"]);
 const bgRandom = Math.floor(Math.random() * 10 + 1);
 
 // 更换壁纸链接
-const changeBg = (type) => {
+const changeBg = async (type) => {
   if (type == 0) {
     bgUrl.value = `/images/background${bgRandom}.jpg`;
   } else if (type == 1) {
@@ -48,6 +49,8 @@ const changeBg = (type) => {
     bgUrl.value = "https://api.vvhan.com/api/wallpaper/acg";
   } else if (type == 4) {
     bgUrl.value = "https://uapis.cn/api/imgapi/furry/img4k.php";
+  } else if (type == 5) {
+    bgUrl.value = "https://api.miaomc.cn/image/get";
   }
 };
 
