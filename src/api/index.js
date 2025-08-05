@@ -49,7 +49,7 @@ export const getHitokoto = async () => {
   const urls = [
     "https://v1.hitokoto.cn", 
     "https://api.vvhan.com/api/ian/rand?type=json", 
-    "https://whyta.cn/api/yiyan?key=d5c296b91907", 
+    // "https://whyta.cn/api/yiyan?key=d5c296b91907", 
     "https://v2.alapi.cn/api/hitokoto?token=LwExDtUWhF3rH5ib"
   ];
   for (let i = 0; i < urls.length; i++) {
@@ -65,6 +65,19 @@ export const getHitokoto = async () => {
     }
   }
   if (res == null) throw new Error('All URLs failed');
+  if (res[0]==0) {
+    res[0] = res[1].hitokoto;
+    res[1] = res[1].from;
+  } else if (res[0]==1) {
+    res[0] = res[1].data.content;
+    res[1] = res[1].data.form;
+  } else if (res[0]==2) {
+    res[0] = res[1].hitokoto;
+    res[1] = res[1].from;
+  } else if (res[0]==3) {
+    res[0] = res[1].data.hitokoto;
+    res[1] = res[1].data.from;
+  }
   return await res;
 }
 

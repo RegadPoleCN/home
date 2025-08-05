@@ -47,19 +47,8 @@ let hitokotoData = reactive({
 // 获取一言数据
 const getHitokotoData = async () => {
   const res = await getHitokoto();
-  if (res[0]==0) {
-    hitokotoData.text = res[1].hitokoto;
-    hitokotoData.from = res[1].from;
-  } else if (res[0]==1) {
-    hitokotoData.text = res[1].data.content;
-    hitokotoData.from = res[1].data.form;
-  } else if (res[0]==2) {
-    hitokotoData.text = res[1].hitokoto;
-    hitokotoData.from = res[1].from;
-  } else if (res[0]==3) {
-    hitokotoData.text = res[1].data.hitokoto;
-    hitokotoData.from = res[1].data.from;
-  }
+  hitokotoData.text = res[0];
+  hitokotoData.from = res[1];
   if (hitokotoData.text == "这里应该显示一句话" && hitokotoData.from == "無名") 
     ElMessage({
         message: "一言获取失败",
