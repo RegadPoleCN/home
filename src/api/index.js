@@ -120,7 +120,7 @@ export const getIp = async () => {
 //获取有兽焉粉丝服务器文档404界面文字
 export const get404Msg = async () => {
   let msg = [];
-  await axios.get("https://ghp.ml1.one/https://raw.githubusercontent.com/ZoruaFox/ysy-fanserver-helppage/refs/heads/master/docs/.vuepress/notFoundMsg.ts")
+  await axios.get("https://gh-proxy.com/https://raw.githubusercontent.com/ZoruaFox/ysy-fanserver-helppage/refs/heads/master/docs/.vuepress/notFoundMsg.ts")
   .then(response => {
     const regex = /notFoundMsg\s*=\s*\[\s*(?:(["'])(.*?)\1\s*,?\s*)*\]/g
     msg = regex.exec(response.data)[0].match(/"([^"]*)"/g)
